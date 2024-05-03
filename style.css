@@ -53,6 +53,7 @@ svg:hover {
 /* SIDEBAR */
 
 .sidebar {
+  position: relative;
   grid-column: 1 / 2;
   grid-row: 1 / 7;
 
@@ -64,6 +65,15 @@ svg:hover {
   font-size: var(--fs-600);
   text-decoration: none;
   color: whitesmoke;
+}
+
+.sidebar .attribution {
+  font-size: var(--fs-300);
+  position: absolute;
+  bottom: 1%;
+  width: 100%;
+  margin-left: -1.5rem;
+  text-align: center;
 }
 
 .sidebar svg {
