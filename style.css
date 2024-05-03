@@ -1,12 +1,22 @@
 :root {
+  /* Font family */
   --ff-sans: "Roboto", sans-serif;
 
+  /* Font sizes */
   --fs-300: 0.6875rem;
   --fs-400: 0.9375rem;
-  --fs-500: 1.25rem;
+  --fs-500: 1.125rem;
   --fs-600: 1.5rem;
   --fs-700: 2rem;
   --fs-900: 3.5rem;
+  --fs-1100: 4rem;
+
+  /* Colors */
+  /* --clr-bdr-proj: #f0b429;
+  --clr-bkgd-main: #e2e8f0;
+  --clr-bkgd-side: #1992d4;
+  --clr-header: #000;
+  --clr-paragraph: #636363; */
 }
 
 * {
@@ -23,6 +33,10 @@ body {
 img {
   display: block;
   width: 100%;
+}
+
+svg:hover {
+  cursor: pointer;
 }
 
 .container {
@@ -64,10 +78,6 @@ img {
   align-items: center;
   column-gap: 10px;
   row-gap: 30px;
-}
-
-.sidebar-menu > li {
-  /* border: 2px solid black; */
 }
 
 .sidebar-menu li {
@@ -145,11 +155,11 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
 }
 
 .notifications img {
-  width: var(--fs-700);
+  width: var(--fs-900);
 }
 
 .user-greeting {
@@ -161,7 +171,7 @@ img {
 }
 
 .user-greeting img {
-  width: var(--fs-900);
+  width: var(--fs-1100);
 }
 
 .user-greeting__text {
@@ -201,7 +211,7 @@ img {
   background-color: #e2e8f0;
   column-gap: 20px;
   row-gap: 20px;
-  padding: 2rem 1rem;
+  padding: 2rem;
 }
 
 .main-content__projects {
@@ -221,11 +231,17 @@ img {
   row-gap: 20px;
 }
 
+.main-content h3 {
+  font-size: var(--fs-600);
+  font-weight: 500;
+}
+
 .announcements {
   display: flex;
   flex-direction: column;
   flex: 1;
   justify-content: space-between;
+  padding: 2rem;
 }
 
 .card {
@@ -236,15 +252,30 @@ img {
 
 .project {
   border-left: 10px solid #f0b429;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-text p,
+.announcements-text p,
+.trending p {
+  color: var(--fc-p);
+}
+
+.project-text h3 {
+  font-size: var(--fs-500);
 }
 
 .project-icons {
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
 }
 
 .project-icons > * {
-  width: var(--fs-700);
+  width: var(--fs-600);
 }
 
 .main-content h3 {
@@ -261,6 +292,14 @@ img {
   align-self: end;
 }
 
+.announcements hr {
+  color: #d2d2d2;
+}
+
+.announcements-text {
+  padding-inline: 5px;
+}
+
 .trending {
   grid-row: 3 / 4;
 
@@ -273,13 +312,13 @@ img {
 .trending-item {
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
-.trending-item > img {
+.trending-item > a > img {
   width: var(--fs-900);
+  margin-right: 1rem;
 }
 
-.trending-item__text > * {
+.trending-text > * {
   font-size: var(--fs-400);
 }
